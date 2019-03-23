@@ -397,3 +397,78 @@ tr:hover .amount {
 }
 
 /*end: second page*/
+
+.date-time-container .form-control.datetimepicker-input {
+  padding: 1.5rem;
+  border-bottom: 1px solid #ced4da;
+}
+
+.date-time-container .form-control:focus {
+  border-color: #ced4da !important;
+}
+
+.date-time-container .input-group-append {
+  border: 1px solid #ced4da;
+  border-right: none;
+}
+
+.date-time-container .input-group-text {
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  background: none;
+}
+
+.date-time-container .arrow-calendar {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget {
+  width: 30rem !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget .table th,
+.date-time-container .bootstrap-datetimepicker-widget .table td {
+  border-top: none !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget .table thead th {
+  border-bottom: none !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget .table td.day,
+.date-time-container .bootstrap-datetimepicker-widget .table th {
+  height: 4rem !important;
+  line-height: 30px !important;
+  border-radius: 4rem;
+  padding: 1rem;
+  width: 4rem !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget .table td.today::before {
+  border-bottom-color: orange !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget .table td.active,
+.date-time-container .bootstrap-datetimepicker-widget .bootstrap-datetimepicker-widget table td.active:hover {
+  background-color: orange !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget.dropdown-menu.top:before {
+  left: 15.950rem !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget.dropdown-menu.top:after {
+  left: 16rem !important;
+}
+
+.date-time-container .bootstrap-datetimepicker-widget.dropdown-menu {
+  margin: 10px 0 !important;
+}
+
+/*DateTimePicker*/

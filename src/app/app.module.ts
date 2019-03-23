@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ExploreComponent } from './explore/explore.component';
 
+import { NgTempusdominusBootstrapModule } from 'ngx-tempusdominus-bootstrap';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,9 @@ import { ExploreComponent } from './explore/explore.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgTempusdominusBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

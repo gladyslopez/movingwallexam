@@ -14,6 +14,8 @@ export class ExploreComponent implements OnInit {
   circulations : Circulation[] = [];
   searchbillboards: number = 4000;
 
+  options: any = {format: 'DD.MM.YYYY', locale: 'fr'};
+
   constructor(private billboardService: BillboardService,
     private circSrvc : CirculationService) { }
 
