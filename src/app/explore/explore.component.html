@@ -49,10 +49,16 @@
       <div class="card mb-4 shadow-sm w-100">
         <div class="card ml-4 mr-4 mt-2 mb-2 rounded-0 border-0">
           <div class="card mb-4 w-100 border-0">
-            <div class="card flex-row flex-wrap rounded-0 border-0">
-              <h5 class="mt-4 mb-4 ml-2 mr-2 text-left font-weight-bold">
-                Search Billboards: {{searchbillboards}}
-              </h5>
+            <div class="d-flex flex-column flex-md-row align-items-center p-2">
+              <div class="lh-100 my-0 mr-md-auto font-weight-normal">
+                <h5 class="mb-0 lh-100">Search Billboard: 4300</h5>
+              </div>
+              <h6 class="mr-2 mt-2">Classic</h6>
+              <label class="switch mr-3 mb-0">  
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+              <h6 class="mr-2 mt-2">Digital</h6>
             </div>
             <table class="table">
               <thead>
@@ -81,7 +87,7 @@
                   <td class="col-lg-2 text-center green-one font-weight-bold">
                     <div class="amount">{{billboard.monthlyRate | number}}</div>
                     <i class="fa fa-pencil"></i>
-                    <div class="edit">Edit</div>
+                    <div class="edit mr-2">Edit</div>
                     <i class="fa fa-times"></i>
                     <div class="delete">Delete</div>
                   </td>
