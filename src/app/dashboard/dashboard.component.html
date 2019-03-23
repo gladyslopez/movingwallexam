@@ -1,0 +1,179 @@
+<div class="container">
+  <div class="card-deck mb-3 text-center mt-5">
+    <div *ngFor="let circ of circulations;" [className]="'card mb-4 shadow-sm '+ circ.box_class" >
+      <div class="card-header border-0 card flex-row flex-wrap" style="margin-right:10px;margin-left:10px;">
+        <div class="media w-100">
+          <img [src]="'../../assets/images/'+circ.logo" class="align-self-center mr-2" />
+          <div [className]="'media-body align-self-center font-weight-bold text-left f-'+ circ.box_class">
+            Circulation
+          </div>
+          <div class="dots"></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="col-lg-12">
+          <h1 class="card-title pricing-card-title f-white">{{circ.value | number}}</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="chart text-center">
+              <div class="bar-1"></div>
+              <div class="bar-2"></div>
+              <div class="bar-3 highlighted"></div>
+              <div class="bar-4"></div>
+              <div class="bar-5"></div>
+              <div class="bar-6"></div>
+              <div class="bar-7"></div>
+              <div class="bar-8"></div>
+              <div class="bar-9"></div>
+              <div class="bar-10"></div>
+              <div class="bar-11"></div>
+              <div class="bar-12"></div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-center">
+            <span class="f-white"><strong>{{circ.month}}</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="position-relative mb-5" style="height: 562px;overflow: hidden;">
+    <div class="card mb-4 shadow-sm graph-container position-absolute w-100">
+      <div class="d-flex flex-column flex-md-row align-items-center pt-2 pb-2 pl-4 pr-4">
+        <div class="lh-100 my-0 mr-md-auto font-weight-normal">
+          <h6 class="mb-0 lh-100">Revenue</h6>
+        </div>
+        <label class="switch mr-3 mb-0">
+          <input type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+        <button id="btn-list"><i class="fa fa-th-large fa-2x"></i></button>
+      </div>
+
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph"
+        aria-labelledby="title" role="img">
+        <title id="title">A line chart showing some information</title>
+        <g class="grid x-grid" id="xGrid">
+          <line x1="90" x2="90" y1="5" y2="371">
+
+          </line>
+        </g>
+        <g class="grid y-grid" id="yGrid">
+          <line x1="90" x2="705" y1="370" y2="370"></line>
+        </g>
+        <g>
+          <polyline fill="none" style="margin-top:100px;" stroke="#0074d9" stroke-width="2"
+            points="00,220 100,60 140,150 200,100 220,150 400,200 480,120 510,210 700,190 80,80 200, 110 220, 10 240, 70 260, 100 280, 100 300, 40 320, 0 340, 100 360, 100 380, 120 400, 60 420, 70 440, 80" />
+        </g>
+        <g class="labels x-labels">
+          <text x="120" y="400">Jan</text>
+          <text x="190" y="400">Feb</text>
+          <text x="240" y="400">Mar</text>
+          <text x="290" y="400">Apr</text>
+          <text x="340" y="400">Jun</text>
+          <text x="390" y="400">Jul</text>
+          <text x="440" y="400">Aug</text>
+          <text x="490" y="400">Sep</text>
+          <text x="540" y="400">Oct</text>
+          <text x="590" y="400">Nov</text>
+          <text x="640" y="400">Dec</text>
+          <!--text x="400" y="440" class="label-title">Year</text-->
+        </g>
+        <g class="labels y-labels">
+          <text x="80" y="20">1m</text>
+          <text x="80" y="100">800k</text>
+          <text x="80" y="170">600k</text>
+          <text x="80" y="230">400k</text>
+          <text x="80" y="290">200k</text>
+          <text x="80" y="350">0</text>
+          <!--text x="50" y="200" class="label-title">Price</text-->
+        </g>
+      </svg>
+    </div>
+    <div class="card mb-4 shadow-sm table-container position-absolute w-100">
+      <div class="card flex-row flex-wrap rounded-0">
+        <h4 class="m-4 text-left">Revenue Data View</h4>
+        <button type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-center">Month</th>
+            <th class="text-right">Created Deals</th>
+            <th class="text-right">Conversion</th>
+            <th class="text-right">Fail</th>
+            <th class="text-center">Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">January</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">400,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">February</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">320,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">March</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">560,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">April</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">234,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">May</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">940,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">June</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">400,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">July</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">400,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">August</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">400,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">September</td>
+            <td class="text-right">120</td>
+            <td class="text-right">80</td>
+            <td class="text-right">40</td>
+            <td class="text-center green-one font-weight-bold">400,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

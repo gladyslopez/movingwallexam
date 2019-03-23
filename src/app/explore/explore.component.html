@@ -1,0 +1,96 @@
+<div class="container-fluid explore-page">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-8">
+      <div class="card-deck mb-3 text-center mt-5">
+        <div class="card mb-4 shadow-sm box-one overflow-hidden" *ngFor="let circ of circulations;">
+          <div class="card-header border-0 card flex-row flex-wrap" style="margin-right:10px;margin-left:10px;">
+            <div class="media w-100">
+              <img src="../../assets/images/box-1-logo-w.png" class="align-self-center mr-2" />
+              <div class="media-body align-self-center font-weight-bold text-left f-grey">
+                Circulation
+              </div>
+              <div class="dots"></div>
+            </div>
+          </div>
+          <div class="card-body" [ngStyle]="{'padding':'.500rem 1rem 0rem 1rem', 'border-bottom': '8px solid', 'border-bottom-color': circ.color}">
+            <div class="col-lg-12">
+              <h2 [className]="'card-title pricing-card-title ' +  circ.class">{{circ.value | number}}</h2>
+            </div>
+            <div class="row">
+              <div class="col-md-text-center col-md-12 col-lg-9">
+                <div class="chart text-center">
+                  <div class="bar-1"></div>
+                  <div class="bar-2"></div>
+                  <div [className]="'bar-3 ' + circ.bar_class"></div>
+                  <div class="bar-4"></div>
+                  <div class="bar-5"></div>
+                  <div class="bar-6"></div>
+                  <div class="bar-7"></div>
+                  <div class="bar-8"></div>
+                  <div class="bar-9"></div>
+                  <div class="bar-10"></div>
+                  <div class="bar-11"></div>
+                  <div class="bar-12"></div>
+                </div>
+              </div>
+              <div class="col-md-text-center col-md-12 col-lg-3 align-items-center">
+                <span class="f-grey"><strong>{{circ.month}}</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden-sm hidden-md col-lg-4">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card mb-4 shadow-sm w-100">
+        <div class="card ml-4 mr-4 mt-2 mb-2 rounded-0 border-0">
+          <div class="card mb-4 w-100 border-0">
+            <div class="card flex-row flex-wrap rounded-0 border-0">
+              <h5 class="mt-4 mb-4 ml-2 mr-2 text-left font-weight-bold">
+                Search Billboards: {{searchbillboards}}
+              </h5>
+            </div>
+            <table class="table">
+              <thead>
+                <tr class="d-flex bg-none">
+                  <th class="col-lg-2 text-left">Location</th>
+                  <th class="col-lg-2 text-left">Media Owner</th>
+                  <th class="col-lg-1 text-left">State</th>
+                  <th class="col-lg-1 text-center">Dimension</th>
+                  <th class="col-lg-1 text-center">Size</th>
+                  <th class="col-lg-1 text-center">Category</th>
+                  <th class="col-lg-2 text-center">Available Day</th>
+                  <th class="col-lg-2 text-center">Monthly Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="d-flex" *ngFor="let billboard of billboards;">
+                  <td class="col-lg-2 text-left">{{billboard.location}}</td>
+                  <td class="col-lg-2 text-left tooltip-box" [attr.data-title]=billboard.mediaOwner>
+                    <a>{{billboard.mediaOwner}}</a>
+                  </td>
+                  <td class="col-lg-1 text-left">{{billboard.state}}</td>
+                  <td class="col-lg-1 text-center">{{billboard.dimension}}</td>
+                  <td class="col-lg-1 text-center">{{billboard.size}}</td>
+                  <td class="col-lg-1 text-center">{{billboard.category}}</td>
+                  <td class="col-lg-2 text-center">{{billboard.availableDays}} Days</td>
+                  <td class="col-lg-2 text-center green-one font-weight-bold">
+                    <div class="amount">{{billboard.monthlyRate | number}}</div>
+                    <i class="fa fa-pencil"></i>
+                    <div class="edit">Edit</div>
+                    <i class="fa fa-times"></i>
+                    <div class="delete">Delete</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,408 @@
+/* You can add global styles to this file, and also import other style files */
+.bd-navbar {
+	background: purple;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  grid-column-gap: 8px;
+  height: 8vh;
+  /*width: 19vw;*/
+  padding: 5px 0px;
+}
+
+.card-header {
+	background: transparent;
+}
+
+.box-one [class*="bar"] {
+	background-color: #934df6;
+}
+
+
+.box-two [class*="bar"] {
+	background-color: #62a0ed;
+}
+
+
+.box-three [class*="bar"] {
+	background-color: #4dc7af;
+}
+
+[class*="bar"] {
+  margin: 0;
+  padding: 0;
+  border-radius: 5px 5px 5px 5px;
+  transition: all .6s ease;
+  grid-row-end: 102;
+  
+  &:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
+}
+
+.bar-1 {
+  grid-row-start: 60;
+}
+
+.bar-2 {
+  grid-row-start: 45;
+}
+
+.bar-3 {
+  grid-row-start: 35;
+}
+
+.bar-4 {
+  grid-row-start: 50;
+}
+
+.bar-5 {
+  grid-row-start: 15;
+}
+
+.bar-6 {
+  grid-row-start: 30;
+}
+
+.bar-7 {
+  grid-row-start: 50;
+}
+
+.bar-8 {
+  grid-row-start: 60;
+}
+
+.bar-9 {
+  grid-row-start: 50;
+}
+
+.bar-10 {
+  grid-row-start: 35;
+}
+
+.bar-11 {
+  grid-row-start: 15;
+}
+
+.bar-12 {
+  grid-row-start: 45;
+}
+
+.highlighted {
+	background-color: #fff !important;
+}
+
+.box-one {
+	background-color: #6400f2;
+}
+.box-two {
+	background-color: #1e77e5;
+}
+.box-three {
+	background-color: #00af8c;
+}
+
+.f-white {
+	color: #fff;
+}
+.f-purple {
+  color: #4300f0;
+}
+.f-grey {
+  color: #74849e;
+}
+.f-blue {
+  color: #1773e4;
+}
+.f-green {
+  color: #00a178;
+}
+.f-box-one {
+	color: #bda5f9;
+}
+.f-box-two {
+	color: #aac4f2;
+}
+.f-box-three {
+	color: #a5dacc;
+}
+.dots:after {
+	content: '\2807';
+    font-size: 25px;
+ }
+.box-one .dots {
+ 	color: #bda5f9;
+ }
+.box-two .dots {
+ 	color: #aac4f2;
+ }
+.box-three .dots {
+ 	color: #a5dacc;
+ }
+
+/*
+[class*="bar"]:nth-child(odd) {
+ background-color: #ff4136; 
+}
+
+[class*="bar"]:nth-child(even) {
+ background-color: #0074d9;
+}*/
+
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+  text-anchor: end;
+}
+
+
+.graph {
+  height: 500px;
+  width: 800px;
+}
+
+.graph .grid {
+  stroke: #ccc;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+
+.labels {
+  font-size: 13px;
+}
+
+.label-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: black;
+}
+
+.data {
+  fill: red;
+  stroke-width: 1; 
+}
+
+.table-container {
+	max-height: 552px;
+    overflow-y: scroll;
+    display: none;
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+
+.table-container::-webkit-scrollbar { /* WebKit */
+  width: 0px;
+}
+
+
+/*Start: Slider toggle*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1c315b;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*End:; Slider Toggle*/
+
+#btn-list {
+  background: none;
+    border: none;
+}
+
+.close span {
+
+    background: #ccc;
+    color: #000;
+    text-shadow: none;
+    font-size: 2rem;
+
+}
+
+/*second page*/
+.green-one {
+  color: #25be54;
+}
+
+tr .edit,
+tr .delete,
+tr .fa-pencil,
+tr .fa-times {
+  display: none;
+}
+
+tr:hover {
+  background-color: #f0f0f5;
+}
+
+tr.bg-none:hover  {
+  background-color: transparent;
+}
+
+tr:hover .edit,
+tr:hover .delete,
+tr:hover .fa-pencil,
+tr:hover .fa-times {
+  display: inline;
+}
+tr:hover .amount {
+  display: none;
+}
+
+.edit,
+.fa-pencil {
+  color: #2865ff;
+}
+.delete,
+.fa-times {
+  color: #e80302;
+}
+
+
+.tooltip-box, .tooltip-links a {
+  position: relative;
+}
+
+.tooltip-box:hover:after, .tooltip-links a:after {
+  padding: 4px 8px;
+  background: #1c315b;
+  content: attr(data-title);
+  font-size: 1em;
+  position: absolute; 
+  top:50px;
+  color:#fff;
+  z-index: 1;
+  max-width: none;
+  white-space: nowrap;
+  padding: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.tooltip-links a:after {
+  content: attr(href);
+  position: static;
+  top: none;
+  right: none;
+  margin-left: 10px;
+  padding: 2px;
+  display: none;
+}
+
+.tooltip-links a:hover:after {
+  display: inline-block;
+}
+
+.tooltip-box:hover:before,
+.tooltip-links a:before {
+  border: solid;
+  z-index: 1;
+  border-color: #1c315b transparent;
+  border-width: 0px 8px 8px 8px;
+  top: 42px;
+  content:"";
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+
+.explore-page .box-one,
+.explore-page .box-two,
+.explore-page .box-three {
+  background-color: #fff;
+}
+
+.explore-page .box-one [class*="bar"] {
+  background-color: #c9d0da;
+}
+
+.explore-page .purple-highlighted {
+  background-color: #4300f0 !important;
+}
+
+.explore-page .box-two [class*="bar"] {
+  background-color: #c9d0da;
+}
+
+.explore-page .blue-highlighted {
+  background-color: #1773e4 !important;
+}
+
+.explore-page .box-three [class*="bar"] {
+  background-color: #c9d0da;
+}
+
+.explore-page .green-highlighted {
+  background-color: #00a178 !important;
+}
+
+/*end: second page*/
