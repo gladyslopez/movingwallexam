@@ -3,7 +3,7 @@
     <div *ngFor="let circ of circulations;" [className]="'card mb-4 shadow-sm '+ circ.box_class" >
       <div class="card-header border-0 card flex-row flex-wrap" style="margin-right:10px;margin-left:10px;">
         <div class="media w-100">
-          <img [src]="'../../assets/images/'+circ.logo" class="align-self-center mr-2" />
+          <img [src]="'assets/images/'+circ.logo" class="align-self-center mr-2" />
           <div [className]="'media-body align-self-center font-weight-bold text-left f-'+ circ.box_class">
             Circulation
           </div>
